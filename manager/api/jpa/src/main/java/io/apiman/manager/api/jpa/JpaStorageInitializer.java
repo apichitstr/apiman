@@ -31,7 +31,6 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
-import org.hibernate.dialect.H2Dialect;
 import org.hibernate.dialect.MySQL57InnoDBDialect;
 import org.hibernate.dialect.MySQL5Dialect;
 import org.hibernate.dialect.MySQL5InnoDBDialect;
@@ -54,8 +53,8 @@ public class JpaStorageInitializer {
     
     private static final Map<String, String> DB_TYPE_MAP = new HashMap<>();
     static {
-        DB_TYPE_MAP.put(ApimanH2Dialect.class.getName(), "h2"); //$NON-NLS-1$
-        DB_TYPE_MAP.put(H2Dialect.class.getName(), "h2"); //$NON-NLS-1$
+        // DB_TYPE_MAP.put(ApimanH2Dialect.class.getName(), "h2"); //$NON-NLS-1$
+        // DB_TYPE_MAP.put(H2Dialect.class.getName(), "h2"); //$NON-NLS-1$
 
         DB_TYPE_MAP.put(ApimanMySQL5Dialect.class.getName(), "mysql5"); //$NON-NLS-1$
         DB_TYPE_MAP.put(MySQL5Dialect.class.getName(), "mysql5"); //$NON-NLS-1$
